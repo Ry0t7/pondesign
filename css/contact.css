@@ -1,0 +1,460 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* outline: 1px solid red; */
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    color: #333;
+    letter-spacing: 0.05em;
+    font-family: var(--font-family-main);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+:root{
+    --font-main:600;
+    --font-weight-sub:700;
+    --font-weight-1:bold;
+    --font-family-main: Montserrat, Arial, "Hiragino Kagu Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    --color:#391e88;
+}
+
+/* header */
+.header{
+    width: 100%;
+    height: auto;
+    overflow-x: clip;
+    padding: 17px 0 0 0;
+    position: fixed;
+    z-index: 999;
+    /* background-color: transparent; 初期は透明 */
+    transition: background-color 0.3s ease; /* 背景色の変化を滑らかに */
+}
+
+.header.scrolled {
+    background-color: #21044d; /* スクロール時の背景色 */
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 23px;
+    font-weight: var(--font-main);
+    font-family: var(--font-family-main);
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding-left: 30px;
+}
+
+.header-logo{
+    color: #fff;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    padding-right: 30px;
+}
+
+.header-btn{
+    font-size: 14px;
+    font-weight: var(--font-main);
+    font-family: var(--font-family-main);
+    letter-spacing: 0.75px;
+    padding-right: 5px;
+    text-decoration: 1px solid #fff;
+}
+
+.inner-right li a{
+    position: relative;
+}
+
+.inner-right li a::after{
+    content: "";
+    position: absolute;
+    bottom: -10px ;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transition: all .5s;
+    transform: scale(0, 1);
+    transform-origin: left top;
+}
+
+.inner-right li a:hover::after{
+    transform: scale(1, 1);
+}
+
+.heder-nav-btn{
+    color: #fff;
+}
+
+.hero-text-br{
+    display: none;
+}
+
+.header-main{
+    padding: 50px 40px 10px 40px;
+    text-align: center;
+}
+
+.header-top{
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #391e88;
+    font-size: 36px;
+}
+
+.header-link-btn:hover{
+    text-decoration: underline 1px solid #333;
+}
+/* フェードアウト */
+.hidden{
+    display: none;
+    transition: all 3s ease-out;
+}
+
+.header-top-sub{
+    display: block;
+    margin-top: 5px;
+    letter-spacing: 0.05em;
+    font-size: 13px;
+}
+
+.header-sub{
+    position: sticky;
+    top: 64px;
+    z-index: 1;
+    padding: 8px 0;
+    background-color: #f0f0f0;
+}
+
+.header-container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-link{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.header-link-1{
+    display: inline;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.header-link-btn{
+    transition: 0.3s;
+    text-decoration: none;
+    color: #333;
+}
+
+.header-link-1::after{
+    padding: 0 0.5em;
+    content: ">";
+    color: #555;
+}
+
+.header-link-1:last-child:after{
+    content: "";
+}
+
+.header-position{
+    height: 50px;
+}
+
+
+/* form */
+
+.contact-btn-main{
+    position: relative;
+    font-weight: bold;
+    line-height: 1.4;
+    display: inline-block;
+    width: 220px;
+    padding: 18px 0;
+    transition: .5s ease-in-out;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+    background-size: 200% auto;
+    font-size: 14px;
+}
+
+.contact-btn-main::after{
+    content: "";
+    color: #fff;
+    position: absolute;
+    top: 28px;
+    right: 1.5em;
+    font-size: 10px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 6px solid #fff;
+    transition:all .3s;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.contact-btn-main:hover::after{
+    right: 5%;
+}
+
+.contact-btn-main:hover{
+    background-position: 100% 0;
+}
+
+/* form */
+.form{
+    padding: 70px 0;
+    padding-top: 250px;
+}
+
+.form-container{
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.form-text{
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.form-br{
+    display: none;
+}
+
+.form-about{
+    padding: 90px;
+    background-color: #f7f7f7;
+}
+
+.form-inner-item{
+    margin-bottom: 30px;
+}
+
+.form-list{
+    display: block;
+    font-weight: var(--font-weight-1);
+    margin-bottom: 5px;
+}
+
+.form-list-span{
+    margin-left: 10px;
+    color: #391e88;
+    font-size: 12px;
+}
+
+.form-small-list:not(:last-child){
+    margin-right: 50px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.from-name{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.from-span-1{
+    margin-left: 10px;
+    color: #391e88;
+    font-size: 12px;
+}
+
+.from-span-2{
+    font-weight: normal;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.from-mail{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.from-tel{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-form{
+    padding-left: 10px;
+}
+
+.form-form-form{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-comment{
+    min-width: 600px;
+    min-height: 200px;
+    padding: 8px;
+    resize: both;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.form-input{
+    width: 300px;
+    height: 25px;
+    padding: 8px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.form-input-1{
+    width: 200px;
+    height: 25px;
+    padding: 8px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.from-tel{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-form{
+    width: 300px;
+    height: 45px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.contact-btn{
+    text-align: center;
+}
+
+select {
+    -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
+    -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+    appearance: none; /* 標準のスタイルを無効にする */
+}
+    ::-ms-expand { /* select要素のデザインを無効にする（IE用） */
+    display: none;
+}
+
+
+/* footer */
+.footer{
+    padding: 60px 30px;
+    background-color: #120e19;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-list{
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #e9e1d1;
+    font-size: 12px;
+}
+
+.footer-list:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-btn{
+    line-height: 1;
+    padding: 5px;
+    color: #fff;
+    transition: .3s;
+}
+
+.footer-btn:hover{
+    opacity: .8;
+}
+
+.footer-bottom{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.footer-bottom-btn{
+    color: #a798b7;
+    transition: .3s;
+    letter-spacing: 0.05em;
+}
+
+.footer-bottom-btn:hover{
+    opacity: .8;
+}
+
+/* top-link */
+
+/* ボタン全体 */
+.elm {
+    width:50px;
+    height: 50px;
+    position: fixed;
+    right: 4.5%;
+    bottom: 5.3%;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 1;
+    transition: opacity 0.1s, z-index 0.1s;
+    cursor: pointer;
+}
+
+.elm::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f062';
+    font-size: 15px;
+    color: #391e88;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.elm:hover{
+    opacity: .8;
+}

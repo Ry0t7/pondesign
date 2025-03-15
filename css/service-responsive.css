@@ -1,0 +1,35 @@
+/* タブレット */
+@media screen and (max-width: 896px){
+/* service */
+.inner-right-sp{
+    display: block;
+}
+
+.open-btn{
+    display: block;
+}
+
+.hero {
+    height: auto;
+}
+
+.works {
+    padding-bottom: 50px;
+}
+
+.elm {
+    right: 5.5%;
+    bottom: 4%;
+}
+
+.all {
+    padding-top: 140px;
+}
+
+
+
+}
+/* スマホサイズ */
+@media screen and (max-width: 480px){
+
+}
